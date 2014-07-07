@@ -1,0 +1,286 @@
+
+[fill-height] {
+  flex-direction: column;
+  min-height: 100%;
+}
+
+[cell],
+[flex-cell] {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[flex-cell] {
+  flex: 1;
+}
+
+
+[ratio="10"] {
+  flex: 0 0 10%;
+  max-width: 10%;
+}
+[ratio="20"] {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+[ratio="25"] {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+[ratio="33"], [ratio="34"] {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+[ratio="50"] {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+[ratio="66"], [ratio="67"] {
+  flex: 0 0 66.6666%;
+  max-width: 66.6666%;
+}
+[ratio="75"] {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+[ratio="80"] {
+  flex: 0 0 80%;
+  max-width: 80%;
+}
+[ratio="90"] {
+  flex: 0 0 90%;
+  max-width: 90%;
+}
+
+
+/* Mobile first responsive design */
+
+/* layout = Everything */
+/* Probably just phones if using other layout sizes
+/* Everything, 0 and greater */
+[layout] {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[layout="vertical"] {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+[layout] + [layout] {
+  margin-top: -5px;
+  padding-top: 0;
+}
+
+[full-bleed],
+[full-bleed] > [cell],
+[full-bleed] > [flex-cell] {
+  padding: 0;
+}
+
+[layout] + [layout][full-bleed] {
+  margin-top: 0;
+}
+
+/* layout-sm = Small (portrait tablets) */
+/* Everything larger than a landscape phone */
+/* 569px and greater */
+@media (min-width: 569px) {
+  [layout-sm] {
+    flex-direction: row;
+  }
+  [layout-sm="vertical"] {
+    flex-direction: column;
+  }
+
+  [ratio-sm="10"] {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+  [ratio-sm="20"] {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  [ratio-sm="25"] {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  [ratio-sm="33"], [ratio="34"] {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  [ratio-sm="50"] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  [ratio-sm="66"], [ratio="67"] {
+    flex: 0 0 66.6666%;
+    max-width: 66.6666%;
+  }
+  [ratio-sm="75"] {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  [ratio-sm="80"] {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+  [ratio-sm="90"] {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+}
+
+/* layout-md = Medium (landscape tablets) */
+/* Everything larger than a portrait tablet */
+/* 768px and greater */
+@media (min-width: 768px) {
+  [layout-md] {
+    flex-direction: row;
+  }
+  [layout-md="vertical"] {
+    flex-direction: column;
+  }
+
+  [ratio-md="10"] {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+  [ratio-md="20"] {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  [ratio-md="25"] {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  [ratio-md="33"], [ratio="34"] {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  [ratio-md="50"] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  [ratio-md="66"], [ratio="67"] {
+    flex: 0 0 66.6666%;
+    max-width: 66.6666%;
+  }
+  [ratio-md="75"] {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  [ratio-md="80"] {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+  [ratio-md="90"] {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+}
+
+/* layout-lg = Large (desktop) */
+/* Everything larger than a landscap tablet */
+@media (min-width: 1025px) {
+  [layout-lg] {
+    flex-direction: row;
+  }
+  [layout-lg="vertical"] {
+    flex-direction: column;
+  }
+
+  [ratio-lg="10"] {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+  [ratio-lg="20"] {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  [ratio-lg="25"] {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  [ratio-lg="33"], [ratio="34"] {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  [ratio-lg="50"] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  [ratio-lg="66"], [ratio="67"] {
+    flex: 0 0 66.6666%;
+    max-width: 66.6666%;
+  }
+  [ratio-lg="75"] {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  [ratio-lg="80"] {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+  [ratio-lg="90"] {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+}
+
+/* layout-xl = Extra Large (large screen) */
+@media (min-width: 1200px) {
+  [layout-xl] {
+    flex-direction: row;
+  }
+  [layout-xl="vertical"] {
+    flex-direction: column;
+  }
+
+  [ratio-xl="10"] {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+  [ratio-xl="20"] {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  [ratio-xl="25"] {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  [ratio-xl="33"], [ratio="34"] {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  [ratio-xl="50"] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  [ratio-xl="66"], [ratio="67"] {
+    flex: 0 0 66.6666%;
+    max-width: 66.6666%;
+  }
+  [ratio-xl="75"] {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  [ratio-xl="80"] {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+  [ratio-xl="90"] {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+}
