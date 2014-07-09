@@ -1,0 +1,85 @@
+<html>
+<head>
+  <title>Reflex Layout Demos</title>
+  <link rel="stylesheet" href="./demos/demo.css">
+</head>
+<body class="demos">
+
+  <h1>Reflex Layout Demos</h1>
+  <p>
+    CSS grid layout and responsive breakpoints using flexbox. Ability to change columns to rows, and vise versa,
+    using attribute values. Mobile first responsive design, meaning it starts at the smallest viewport first
+    and builts up.
+  </p>
+  <table>
+    <tr>
+      <th>Attribute</th>
+      <th>Value</th>
+      <th>Purpose</th>
+    </tr>
+    <tr>
+      <td>layout</td>
+      <td>horizontal</td>
+      <td>
+        This is a row with child columns.
+        This element acts as a layout container and its immediate child elements will line up horizontally.
+      </td>
+    </tr>
+    <tr>
+      <td>layout</td>
+      <td>vertical</td>
+      <td>
+        This is a column with child rows.
+        This element acts as a layout container and its immediate child elements will line up vertically.
+      </td>
+    </tr>
+  </table>
+
+  <h3>Header, Menu, Main, Footer, no padding</h3>
+  <p>
+    This layout lets each of the header and footer tracks height be the size of their
+    respective content, and the middle track (menu and main) flex vertically to fill the
+    space of the entire layout.
+  </p>
+
+  <p>
+    The body element has the <code>layout="vertical"</code> attribute.
+    By default the middle track has the menu and main cells stacked vertically. However,
+    the cells line up horizontally starting at the "small" size, which is determined by the
+    media query.
+  </p>
+
+  <iframe src="./demos/full-width-header-menu-footer.html"></iframe>
+
+
+  <h3>Layout Padding</h3>
+  <p>
+    This layout has padding, or gutters, between each cell. Each <code>layout</code>
+    element also has the <code>layout-padding</code> attribute.
+  </p>
+  <iframe src="./demos/layout-padding.html"></iframe>
+
+
+  <h3>Padded Content Grid</h3>
+  <iframe src="./demos/layout-padding.html"></iframe>
+
+
+  <script>
+    var iframes = document.getElementsByTagName('iframe');
+    for(var x=0; x<iframes.length; x++) {
+      var viewSourceEle = document.createElement('a');
+      viewSourceEle.href = 'view-source:' + iframes[x].src;
+      viewSourceEle.target = '_blank';
+      viewSourceEle.innerText = 'View Source';
+      iframes[x].parentElement.insertBefore(viewSourceEle, iframes[x]);
+
+      var fullScreenEle = document.createElement('a');
+      fullScreenEle.href =  iframes[x].src;
+      fullScreenEle.target = '_blank';
+      fullScreenEle.innerText = 'Full Screen';
+      iframes[x].parentElement.insertBefore(fullScreenEle, iframes[x]);
+    }
+  </script>
+
+</body>
+</html>
