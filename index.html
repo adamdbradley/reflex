@@ -108,27 +108,11 @@
   </table>
 
 
-
-  <h3>Header, Menu, Main, Footer, no padding</h3>
-  <p>
-    This layout lets each of the header and footer tracks height be the size of their
-    respective content, and the middle track (menu and main) flex vertically to fill the
-    space of the entire layout.
-  </p>
-  <p>
-    The body element has the <code>layout="vertical"</code> attribute.
-    By default the middle track has the menu and main cells stacked vertically. However,
-    the cells line up horizontally starting at the "small" size, which is determined by the
-    media query.
-  </p>
-  <iframe src="./demos/full-width-header-menu-footer.html"></iframe>
-
-
   <h3>Layout Padding</h3>
   <p>
     This layout has padding, or gutters, between each cell. Each <code>layout</code>
     element also has the <code>layout-padding</code> attribute. The <code>flex</code>
-    is not required because they will all evenly distribute.
+    attribute is not required because they will all evenly distribute.
   </p>
   <iframe src="./demos/layout-padding.html"></iframe>
 
@@ -147,6 +131,24 @@
     Cells can be offset from the left, but still allow the gutters to line up correctly.
   </p>
   <iframe src="./demos/layout-padding-offsets.html"></iframe>
+
+
+
+  <h3>Header, Menu, Main, Footer, no padding</h3>
+  <p>
+    This layout lets each of the header and footer tracks height be the size of their
+    respective content, and the middle track (menu and main) flex vertically to fill the
+    space of the entire layout. This is also an example of nested layouts, where the entire
+    body is a vertical layout (header/content/footer), and the content row is its own layout
+    (menu/main), and each layout has their own settings.
+  </p>
+  <p>
+    The body element has the <code>layout="vertical"</code> attribute.
+    By default the middle track has the menu and main cells stacked vertically. However,
+    the cells line up horizontally starting at the "small" size, which is determined by the
+    media query.
+  </p>
+  <iframe src="./demos/full-width-header-menu-footer.html"></iframe>
 
 
   <script>
