@@ -2,15 +2,23 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Layout Padding</title>
-  <link rel="stylesheet" href="../css/layout.css">
+  <title>Layout Padding Offsets</title>
+  <link rel="stylesheet" href="../layout.css">
   <link rel="stylesheet" href="./demo.css">
 </head>
 <body>
 
+  <div layout="horizontal" layout-padding>
+
+    <div flex="75">
+      <div class="demo-cell">Cell 1</div>
+    </div>
+
+  </div>
+
   <div layout="vertical" layout-sm="horizontal" layout-padding>
 
-    <div>
+    <div offset="25">
       <div class="demo-cell">Cell 1</div>
     </div>
 
@@ -20,10 +28,6 @@
 
     <div>
       <div class="demo-cell">Cell 3</div>
-    </div>
-
-    <div>
-      <div class="demo-cell">Cell 4</div>
     </div>
 
   </div>
@@ -31,31 +35,19 @@
   <div layout="vertical" layout-md="horizontal" layout-padding>
 
     <div>
-      <div class="demo-cell">Cell 1</div>
+      <div class="demo-cell">Cell 2</div>
     </div>
 
-    <div>
-      <div class="demo-cell">Cell 2</div>
+    <div offset="25" flex="50">
+      <div class="demo-cell">Cell 1</div>
     </div>
 
   </div>
 
-  <div layout="vertical" layout-lg="horizontal" layout-padding>
+  <div layout="horizontal" layout-padding>
 
-    <div>
+    <div offset="25" flex="50">
       <div class="demo-cell">Cell 1</div>
-    </div>
-
-    <div>
-      <div class="demo-cell">Cell 2</div>
-    </div>
-
-    <div>
-      <div class="demo-cell">Cell 3</div>
-    </div>
-
-    <div>
-      <div class="demo-cell">Cell 4</div>
     </div>
 
   </div>
