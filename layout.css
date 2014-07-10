@@ -1,7 +1,6 @@
 
 /* Mobile first responsive design */
 
-/* layout = Everything */
 [layout] {
   display: flex;
   flex-direction: row;
@@ -40,63 +39,56 @@
   padding-top: 0;
 }
 
-[cell="flex"] {
-  flex: 1;
-}
-[cell="block"] {
-  display: block;
-  flex: none;
-}
-
 [layout-fill] {
   margin: 0;
-  padding: 0;
-  min-height: 100%;
+  height: 100vh;
 }
 
-[ratio="10"] {
+[flex] {
+  flex: 1;
+}
+
+[flex="10"] {
   max-width: 10%;
   flex: 0 0 10%;
 }
-[ratio="20"] {
+[flex="20"] {
   max-width: 20%;
   flex: 0 0 20%;
 }
-[ratio="25"] {
+[flex="25"] {
   max-width: 25%;
   flex: 0 0 25%;
 }
-[ratio="33"], [ratio="34"] {
+[flex="33"], [flex="34"] {
   max-width: 33.3333%;
   flex: 0 0 33.3333%;
 }
-[ratio="50"] {
+[flex="50"] {
   max-width: 50%;
   flex: 0 0 50%;
 }
-[ratio="66"], [ratio="67"] {
+[flex="66"], [flex="67"] {
   max-width: 66.6666%;
   flex: 0 0 66.6666%;
 }
-[ratio="75"] {
+[flex="75"] {
   max-width: 75%;
   flex: 0 0 75%;
 }
-[ratio="80"] {
+[flex="80"] {
   max-width: 80%;
   flex: 0 0 80%;
 }
-[ratio="90"] {
+[flex="90"] {
   max-width: 90%;
   flex: 0 0 90%;
 }
 
 
 
-/* layout-sm = Small (portrait tablets) */
-/* Everything larger than a landscape phone */
-/* 569px and greater */
-@media (min-width: 569px) {
+/* layout-sm = Small (Tablets) */
+@media (min-width: 600px) {
   [layout-sm] {
     flex-direction: row;
   }
@@ -104,48 +96,50 @@
     flex-direction: column;
   }
 
-  [ratio-sm="10"] {
+  [flex-sm] {
+    flex: 1;
+  }
+
+  [flex-sm="10"] {
     max-width: 10%;
     flex: 0 0 10%;
   }
-  [ratio-sm="20"] {
+  [flex-sm="20"] {
     max-width: 20%;
     flex: 0 0 20%;
   }
-  [ratio-sm="25"] {
+  [flex-sm="25"] {
     max-width: 25%;
     flex: 0 0 25%;
   }
-  [ratio-sm="33"], [ratio="34"] {
+  [flex-sm="33"], [flex="34"] {
     max-width: 33.3333%;
     flex: 0 0 33.3333%;
   }
-  [ratio-sm="50"] {
+  [flex-sm="50"] {
     max-width: 50%;
     flex: 0 0 50%;
   }
-  [ratio-sm="66"], [ratio="67"] {
+  [flex-sm="66"], [flex="67"] {
     max-width: 66.6666%;
     flex: 0 0 66.6666%;
   }
-  [ratio-sm="75"] {
+  [flex-sm="75"] {
     max-width: 75%;
     flex: 0 0 75%;
   }
-  [ratio-sm="80"] {
+  [flex-sm="80"] {
     max-width: 80%;
     flex: 0 0 80%;
   }
-  [ratio-sm="90"] {
+  [flex-sm="90"] {
     max-width: 90%;
     flex: 0 0 90%;
   }
 }
 
-/* layout-md = Medium (landscape tablets) */
-/* Everything larger than a portrait tablet */
-/* 768px and greater */
-@media (min-width: 768px) {
+/* layout-md = Medium (Desktops) */
+@media (min-width: 960px) {
   [layout-md] {
     flex-direction: row;
   }
@@ -153,47 +147,50 @@
     flex-direction: column;
   }
 
-  [ratio-md="10"] {
+  [flex-md] {
+    flex: 1;
+  }
+
+  [flex-md="10"] {
     max-width: 10%;
     flex: 0 0 10%;
   }
-  [ratio-md="20"] {
+  [flex-md="20"] {
     max-width: 20%;
     flex: 0 0 20%;
   }
-  [ratio-md="25"] {
+  [flex-md="25"] {
     max-width: 25%;
     flex: 0 0 25%;
   }
-  [ratio-md="33"], [ratio="34"] {
+  [flex-md="33"], [flex="34"] {
     max-width: 33.3333%;
     flex: 0 0 33.3333%;
   }
-  [ratio-md="50"] {
+  [flex-md="50"] {
     max-width: 50%;
     flex: 0 0 50%;
   }
-  [ratio-md="66"], [ratio="67"] {
+  [flex-md="66"], [flex="67"] {
     max-width: 66.6666%;
     flex: 0 0 66.6666%;
   }
-  [ratio-md="75"] {
+  [flex-md="75"] {
     max-width: 75%;
     flex: 0 0 75%;
   }
-  [ratio-md="80"] {
+  [flex-md="80"] {
     max-width: 80%;
     flex: 0 0 80%;
   }
-  [ratio-md="90"] {
+  [flex-md="90"] {
     max-width: 90%;
     flex: 0 0 90%;
   }
 }
 
-/* layout-lg = Large (desktop) */
-/* Everything larger than a landscap tablet */
-@media (min-width: 1025px) {
+/* layout-lg = Large */
+@media (min-width: 1200px) {
   [layout-lg] {
     flex-direction: row;
   }
@@ -201,86 +198,43 @@
     flex-direction: column;
   }
 
-  [ratio-lg="10"] {
+  [flex-lg] {
+    flex: 1;
+  }
+
+  [flex-lg="10"] {
     max-width: 10%;
     flex: 0 0 10%;
   }
-  [ratio-lg="20"] {
+  [flex-lg="20"] {
     max-width: 20%;
     flex: 0 0 20%;
   }
-  [ratio-lg="25"] {
+  [flex-lg="25"] {
     max-width: 25%;
     flex: 0 0 25%;
   }
-  [ratio-lg="33"], [ratio="34"] {
+  [flex-lg="33"], [flex="34"] {
     max-width: 33.3333%;
     flex: 0 0 33.3333%;
   }
-  [ratio-lg="50"] {
+  [flex-lg="50"] {
     max-width: 50%;
     flex: 0 0 50%;
   }
-  [ratio-lg="66"], [ratio="67"] {
+  [flex-lg="66"], [flex="67"] {
     max-width: 66.6666%;
     flex: 0 0 66.6666%;
   }
-  [ratio-lg="75"] {
+  [flex-lg="75"] {
     max-width: 75%;
     flex: 0 0 75%;
   }
-  [ratio-lg="80"] {
+  [flex-lg="80"] {
     max-width: 80%;
     flex: 0 0 80%;
   }
-  [ratio-lg="90"] {
-    max-width: 90%;
-    flex: 0 0 90%;
-  }
-}
-
-/* layout-xl = Extra Large (large screen) */
-@media (min-width: 1200px) {
-  [layout-xl] {
-    flex-direction: row;
-  }
-  [layout-xl="vertical"] {
-    flex-direction: column;
-  }
-
-  [ratio-xl="10"] {
-    max-width: 10%;
-    flex: 0 0 10%;
-  }
-  [ratio-xl="20"] {
-    max-width: 20%;
-    flex: 0 0 20%;
-  }
-  [ratio-xl="25"] {
-    max-width: 25%;
-    flex: 0 0 25%;
-  }
-  [ratio-xl="33"], [ratio="34"] {
-    max-width: 33.3333%;
-    flex: 0 0 33.3333%;
-  }
-  [ratio-xl="50"] {
-    max-width: 50%;
-    flex: 0 0 50%;
-  }
-  [ratio-xl="66"], [ratio="67"] {
-    max-width: 66.6666%;
-    flex: 0 0 66.6666%;
-  }
-  [ratio-xl="75"] {
-    max-width: 75%;
-    flex: 0 0 75%;
-  }
-  [ratio-xl="80"] {
-    max-width: 80%;
-    flex: 0 0 80%;
-  }
-  [ratio-xl="90"] {
+  [flex-lg="90"] {
     max-width: 90%;
     flex: 0 0 90%;
   }

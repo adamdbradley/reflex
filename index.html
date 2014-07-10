@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Reflex Layout Demos</title>
   <link rel="stylesheet" href="./demos/demo.css">
 </head>
@@ -33,7 +35,75 @@
         This element acts as a layout container and its immediate child elements will line up vertically.
       </td>
     </tr>
+    <tr>
+      <td nowrap>layout-padding</td>
+      <td></td>
+      <td>
+        Applies padding (gutters) between this layout's child cells.
+      </td>
+    </tr>
+    <tr>
+      <td>flex</td>
+      <td></td>
+      <td>
+        This cell should flex and fill the available area within the layout container. This is the default
+        cell's flex behavior at every viewport size.
+      </td>
+    </tr>
+    <tr>
+      <td>flex</td>
+      <td>[integer]</td>
+      <td>
+        A percent of the available area to take take up.
+      </td>
+    </tr>
   </table>
+
+  <p>
+    The above attributes can also be applied only to certain viewport sizes by using
+    specific media query sizes. For example, <code>layout-md</code> would only be
+    active when the medium media query is active.
+  </p>
+  <table>
+    <tr>
+      <th>Attribute</th>
+      <th nowrap>Viewport Size</th>
+      <th>General Device</th>
+    </tr>
+    <tr>
+      <td nowrap>layout-lg</td>
+      <td nowrap>>= 1200px</td>
+      <td>
+        Large devices
+      </td>
+    </tr>
+    <tr>
+      <td nowrap>layout-md</td>
+      <td nowrap>>= 960px</td>
+      <td>
+        Desktops
+      </td>
+    </tr>
+    <tr>
+      <td nowrap>layout-sm</td>
+      <td nowrap>>= 600px</td>
+      <td>
+        Tablets
+      </td>
+    </tr>
+    <tr>
+      <td>layout</td>
+      <td>>= 0</td>
+      <td>
+        An attribute without a size suffix is the default and would be overridden
+        by larger sizes. This follows the mobile first responsive design pattern, so
+        in many cases this would be the setting for the smallest device, such
+        as phone.
+      </td>
+    </tr>
+  </table>
+
+
 
   <h3>Header, Menu, Main, Footer, no padding</h3>
   <p>
@@ -41,24 +111,22 @@
     respective content, and the middle track (menu and main) flex vertically to fill the
     space of the entire layout.
   </p>
-
   <p>
     The body element has the <code>layout="vertical"</code> attribute.
     By default the middle track has the menu and main cells stacked vertically. However,
     the cells line up horizontally starting at the "small" size, which is determined by the
     media query.
   </p>
-
   <iframe src="./demos/full-width-header-menu-footer.html"></iframe>
 
 
   <h3>Layout Padding</h3>
   <p>
     This layout has padding, or gutters, between each cell. Each <code>layout</code>
-    element also has the <code>layout-padding</code> attribute.
+    element also has the <code>layout-padding</code> attribute. The <code>flex</code>
+    is not required because they will all evenly distribute.
   </p>
   <iframe src="./demos/layout-padding.html"></iframe>
-
 
 
   <script>

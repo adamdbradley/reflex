@@ -51,22 +51,21 @@ p {
 }
 
 header {
-  background: purple;
+  background: #AB47BC;
   color: white;
 }
 
 aside {
-  background: blue;
+  background: #00BCD4;
   color: white;
 }
 
 main {
-  background: green;
-  color: white;
+  background: white;
 }
 
 footer {
-  background: red;
+  background: #8BC34A;
   color: white;
 }
 
