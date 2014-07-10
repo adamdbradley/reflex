@@ -69,6 +69,15 @@ footer {
   color: white;
 }
 
+[layout] {
+  background: #eee;
+  border: 1px solid #999;
+  border-left: 0;
+  border-right: 0;
+}
+[layout]:first-child {
+  border-top: 0;
+}
 .demo-cell {
   padding: 10px;
   background: #AB47BC;

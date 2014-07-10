@@ -27,7 +27,7 @@ $offset-name:    "offset";
   width: 100%;
 }
 
-[#{$track-name}] > * {
+[#{$track-name}] > [#{$cell-name}] {
   @include box-sizing(border-box);
   display: block;
   margin: 0;
@@ -40,7 +40,7 @@ $offset-name:    "offset";
 }
 
 [#{$track-name}-#{$gutter-name}],
-[#{$track-name}-#{$gutter-name}] > * {
+[#{$track-name}][#{$track-name}-#{$gutter-name}] > * {
   padding: $gutter-width / 2;
 }
 

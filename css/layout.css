@@ -32,7 +32,7 @@
   width: 100%;
 }
 
-[layout] > * {
+[layout] > [flex] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -52,7 +52,7 @@
 }
 
 [layout-padding],
-[layout-padding] > * {
+[layout][layout-padding] > * {
   padding: 5px;
 }
 

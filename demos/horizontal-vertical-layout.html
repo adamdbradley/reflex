@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Layout Padding Percents</title>
+  <title>Horizontal/Vertical Layouts</title>
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="./demo.css">
 </head>
@@ -10,48 +10,36 @@
 
   <div layout="horizontal" layout-padding>
 
-    <div flex flex="33">
+    <div>
       <div class="demo-cell">Cell 1</div>
     </div>
 
-    <div flex>
+    <div>
       <div class="demo-cell">Cell 2</div>
     </div>
 
   </div>
 
-  <div layout="horizontal" layout-padding>
+  <div layout="vertical" layout-padding>
 
-    <div flex flex="66">
+    <div>
       <div class="demo-cell">Cell 1</div>
     </div>
 
-    <div flex>
+    <div>
       <div class="demo-cell">Cell 2</div>
     </div>
 
   </div>
 
-  <div layout="vertical" layout-sm="horizontal" layout-padding>
+  <div layout="vertical" layout-md="horizontal" layout-padding>
 
-    <div flex>
+    <div>
       <div class="demo-cell">Cell 1</div>
     </div>
 
-    <div flex>
+    <div>
       <div class="demo-cell">Cell 2</div>
-    </div>
-
-    <div flex>
-      <div class="demo-cell">Cell 2</div>
-    </div>
-
-  </div>
-
-  <div layout="horizontal" layout-padding>
-
-    <div flex="20" flex-sm="33" flex-md="66" flex-lg="80">
-      <div class="demo-cell">Cell 1</div>
     </div>
 
   </div>

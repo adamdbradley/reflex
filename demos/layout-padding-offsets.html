@@ -10,15 +10,15 @@
 
   <div layout="vertical" layout-sm="horizontal" layout-padding>
 
-    <div offset-sm="25">
+    <div flex offset-sm="25">
       <div class="demo-cell">Cell 1</div>
     </div>
 
-    <div>
+    <div flex>
       <div class="demo-cell">Cell 2</div>
     </div>
 
-    <div>
+    <div flex>
       <div class="demo-cell">Cell 3</div>
     </div>
 
@@ -26,11 +26,11 @@
 
   <div layout="vertical" layout-md="horizontal" layout-padding>
 
-    <div>
+    <div flex>
       <div class="demo-cell">Cell 1</div>
     </div>
 
-    <div offset-md="25" flex-md="50">
+    <div flex offset-md="25" flex-md="50">
       <div class="demo-cell">Cell 2</div>
     </div>
 
@@ -38,7 +38,7 @@
 
   <div layout="horizontal" layout-padding>
 
-    <div offset="25" flex="50">
+    <div flex="50" offset="25">
       <div class="demo-cell">Cell 1</div>
     </div>
 
@@ -46,12 +46,28 @@
 
   <div layout="vertical" layout-lg="horizontal" layout-padding>
 
-    <div>
+    <div flex>
       <div class="demo-cell">Cell 1</div>
     </div>
 
-    <div flex-lg="25">
+    <div flex flex-lg="25">
       <div class="demo-cell">Cell 2</div>
+    </div>
+
+  </div>
+
+  <div layout="horizontal" layout-padding>
+
+    <div flex>
+      <div class="demo-cell">Cell 1</div>
+    </div>
+
+    <div flex="50">
+      <div class="demo-cell">Cell 2</div>
+    </div>
+
+    <div flex>
+      <div class="demo-cell">Cell 1</div>
     </div>
 
   </div>
