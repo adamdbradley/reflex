@@ -10,10 +10,10 @@ body.demos {
 }
 
 code {
-  font-size: 16px;
-  background: #eee;
-  padding: 1px 5px;
   margin: 0 2px;
+  padding: 1px 5px;
+  background: #eee;
+  font-size: 16px;
 }
 
 iframe {
@@ -24,15 +24,15 @@ iframe {
 }
 
 a {
-  font-size: 11px;
   margin: 0 5px;
+  font-size: 11px;
 }
 table {
   margin: 20px 0;
 }
 td, th {
-  vertical-align: top;
   padding: 5px 10px;
+  vertical-align: top;
 }
 th {
   background: #eee;
@@ -69,35 +69,33 @@ footer {
   color: white;
 }
 
-[layout] {
-  background: #eee;
-  border: 1px solid #999;
-  border-left: 0;
-  border-right: 0;
-}
-[layout]:first-child {
-  border-top: 0;
-}
 .demo-cell {
   padding: 10px;
-  background: #AB47BC;
+  background: #eee;
   color: white;
 }
 
-@media (min-width: 600px) {
-  .demo-cell {
-    background: #8BC34A;
-  }
+[layout]:nth-child(1) .demo-cell {
+  background: #8BC34A;
 }
 
-@media (min-width: 960px) {
-  .demo-cell {
-    background: #00BCD4;
-  }
+[layout]:nth-child(2) .demo-cell {
+  background: #00BCD4;
 }
 
-@media (min-width: 1200px) {
-  .demo-cell {
-    background: #FF4081;
-  }
+[layout]:nth-child(3) .demo-cell {
+  background: #FF4081;
 }
+
+[layout]:nth-child(4) .demo-cell {
+  background: #AB47BC;
+}
+
+[layout]:nth-child(5) .demo-cell {
+  background: #FFCD40;
+}
+
+[layout]:nth-child(6) .demo-cell {
+  background: #005399;
+}
+

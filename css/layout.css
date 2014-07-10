@@ -53,11 +53,11 @@
 
 [layout-padding],
 [layout][layout-padding] > * {
-  padding: 5px;
+  padding: 7.5px;
 }
 
 [layout-padding] + [layout-padding] {
-  margin-top: -5px;
+  margin-top: -7.5px;
   padding-top: 0;
 }
 
