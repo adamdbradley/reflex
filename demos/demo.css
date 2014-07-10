@@ -70,7 +70,25 @@ footer {
 }
 
 .demo-cell {
-  padding: 5px;
-  border: 1px solid #ccc;
-  background: #eee;
+  padding: 10px;
+  background: #AB47BC;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .demo-cell {
+    background: #8BC34A;
+  }
+}
+
+@media (min-width: 960px) {
+  .demo-cell {
+    background: #00BCD4;
+  }
+}
+
+@media (min-width: 1200px) {
+  .demo-cell {
+    background: #FF4081;
+  }
 }
