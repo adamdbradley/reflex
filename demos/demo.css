@@ -5,6 +5,10 @@ body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+body.demos:before {
+  display: none;
+}
+
 body.demos {
   padding: 10px 30px;
 }
@@ -121,35 +125,37 @@ footer {
   background: #AB47BC;
 }
 
-body.demos:before {
+body:before {
   position: fixed;
-  top: 10px;
-  right: 10px;
-  color: white;
-  opacity: .4;
-  padding: 5px;
+  top: 4px;
+  right: 4px;
+  display: block;
+  padding: 3px 4px;
+  width: 40px;
+  border-radius: 4px;
   background: #b0120a;
+  color: white;
   content: 'default';
-  width: 70px;
   text-align: center;
+  font-size: 10px;
 }
 
 @media (min-width: 600px) {
-  body.demos:before {
+  body:before {
     background: #4a148c;
     content: 'small';
   }
 }
 
 @media (min-width: 960px) {
-  body.demos:before {
+  body:before {
     background: #0d5302;
     content: 'medium';
   }
 }
 
 @media (min-width: 1200px) {
-  body.demos:before {
+  body:before {
     background: #01579b;
     content: 'large';
   }
