@@ -126,30 +126,94 @@
   justify-content: $value;
 }
 
-@mixin responsive-grid-break($selector, $max-width) {
-  @media (max-width: $max-width) {
-    #{$selector} {
-      -webkit-box-direction: normal;
-      -moz-box-direction: normal;
-      -webkit-box-orient: vertical;
-      -moz-box-orient: vertical;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-
-      .col, .col-10, .col-20, .col-25, .col-33, .col-34, .col-50, .col-66, .col-67, .col-75, .col-80, .col-90 {
-        @include flex(1);
-        margin-bottom: ($grid-padding-width * 3) / 2;
-        margin-left: 0;
-        max-width: 100%;
-        width: 100%;
-      }
-    }
-  }
-}
-
 @mixin box-sizing($boxmodel) {
   -webkit-box-sizing: $boxmodel;
      -moz-box-sizing: $boxmodel;
           box-sizing: $boxmodel;
+}
+
+@mixin flex-presets($attr) {
+  [#{$attr}] {
+    @include flex(1);
+  }
+  [#{$attr}="10"] {
+    max-width: 10%;
+    @include flex(0, 0, 10%);
+  }
+  [#{$attr}="20"] {
+    max-width: 20%;
+    @include flex(0, 0, 20%);
+  }
+  [#{$attr}="25"] {
+    max-width: 25%;
+    @include flex(0, 0, 25%);
+  }
+  [#{$attr}="33"], [#{$attr}="34"] {
+    max-width: 33.33%;
+    @include flex(0, 0, 33.33%);
+  }
+  [#{$attr}="50"] {
+    max-width: 50%;
+    @include flex(0, 0, 50%);
+  }
+  [#{$attr}="66"], [#{$attr}="67"] {
+    max-width: 66.66%;
+    @include flex(0, 0, 66.66%);
+  }
+  [#{$attr}="75"] {
+    max-width: 75%;
+    @include flex(0, 0, 75%);
+  }
+  [#{$attr}="80"] {
+    max-width: 80%;
+    @include flex(0, 0, 80%);
+  }
+  [#{$attr}="90"] {
+    max-width: 90%;
+    @include flex(0, 0, 90%);
+  }
+}
+
+@mixin offset-presets($attr) {
+  [#{$attr}="10"] {
+    margin-left: 10%;
+  }
+  [#{$attr}="20"] {
+    margin-left: 20%;
+  }
+  [#{$attr}="25"] {
+    margin-left: 25%;
+  }
+  [#{$attr}="33"], [#{$attr}="34"] {
+    margin-left: 33.33%;
+  }
+  [#{$attr}="50"] {
+    margin-left: 50%;
+  }
+  [#{$attr}="66"], [#{$attr}="67"] {
+    margin-left: 66.66%;
+  }
+  [#{$attr}="75"] {
+    margin-left: 75%;
+  }
+  [#{$attr}="80"] {
+    margin-left: 80%;
+  }
+  [#{$attr}="90"] {
+    margin-left: 90%;
+  }
+}
+
+@mixin breakpoint-media-query($suffix, $min-width) {
+  @media (min-width: $min-width) {
+    [#{$track-name}-#{$suffix}] {
+      @include flex-direction(row);
+    }
+    [layout-#{$suffix}="vertical"] {
+      @include flex-direction(column);
+    }
+
+    @include flex-presets( #{$cell-name}-#{$suffix} );
+    @include offset-presets( #{$offset-name}-#{$suffix} );
+  }
 }
