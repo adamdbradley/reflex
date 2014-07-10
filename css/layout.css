@@ -29,7 +29,6 @@
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 100%;
 }
 
 [layout] > [flex] {
@@ -37,8 +36,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
-  padding: 0;
-  width: 100%;
 }
 
 [layout] > [layout] {

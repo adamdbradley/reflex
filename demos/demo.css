@@ -72,7 +72,7 @@ footer {
 .demo [layout] > div {
   margin: 10px;
   padding: 10px;
-  min-width: 40px
+  min-width: 40px;
 }
 
 .demo,
@@ -87,31 +87,71 @@ footer {
 
 .demo [layout]:nth-child(1) > div,
 .demo-padding [layout-padding]:nth-child(1) > div > div {
+  border: 1px solid #0097a7;
   background: #00BCD4;
 }
 
 .demo [layout]:nth-child(2) > div,
 .demo-padding [layout-padding]:nth-child(2) > div > div {
+  border: 1px solid #689f38;
   background: #8BC34A;
 }
 
 .demo [layout]:nth-child(3) > div,
 .demo-padding [layout-padding]:nth-child(3) > div > div {
-  background: #005399;
+  border: 1px solid #455ede;
+  background: #5677fc;
 }
 
 .demo [layout]:nth-child(4) > div,
 .demo-padding [layout-padding]:nth-child(4) > div > div {
-  background: #FFCD40;
+  border: 1px solid #ffa000;
+  background: #ffc107;
 }
 
 .demo [layout]:nth-child(5) > div,
 .demo-padding [layout-padding]:nth-child(5) > div > div {
+  border: 1px solid #f50057;
   background: #FF4081;
 }
 
 .demo [layout]:nth-child(6) > div,
 .demo-padding [layout-padding]:nth-child(6) > div > div {
+  border: 1px solid #8e24aa;
   background: #AB47BC;
+}
+
+body.demos:before {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: white;
+  opacity: .4;
+  padding: 5px;
+  background: #b0120a;
+  content: 'default';
+  width: 70px;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  body.demos:before {
+    background: #4a148c;
+    content: 'small';
+  }
+}
+
+@media (min-width: 960px) {
+  body.demos:before {
+    background: #0d5302;
+    content: 'medium';
+  }
+}
+
+@media (min-width: 1200px) {
+  body.demos:before {
+    background: #01579b;
+    content: 'large';
+  }
 }
 

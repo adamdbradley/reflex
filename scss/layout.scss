@@ -19,14 +19,11 @@ $gutter-width:   15px !default;
 [layout="vertical"] {
   @include display-flex();
   @include flex-direction(column);
-  width: 100%;
 }
 
 [layout] > [flex] {
   @include box-sizing(border-box);
   display: block;
-  padding: 0;
-  width: 100%;
 }
 
 [layout] > [layout] {
