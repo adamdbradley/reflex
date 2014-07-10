@@ -9,54 +9,49 @@ $breakpoint-md:  960px !default;
 $breakpoint-lg:  1200px !default;
 $gutter-width:   15px !default;
 
-$track-name:     "layout";
-$cell-name:      "flex";
-$gutter-name:    "padding";
-$offset-name:    "offset";
 
-
-[#{$track-name}] {
+[layout] {
   @include box-sizing(border-box);
   @include display-flex();
   @include flex-direction(row);
 }
 
-[#{$track-name}="vertical"] {
+[layout="vertical"] {
   @include display-flex();
   @include flex-direction(column);
   width: 100%;
 }
 
-[#{$track-name}] > [#{$cell-name}] {
+[layout] > [flex] {
   @include box-sizing(border-box);
   display: block;
-  margin: 0;
+  //margin: 0;
   padding: 0;
   width: 100%;
 }
 
-[#{$track-name}] > [#{$track-name}] {
+[layout] > [layout] {
   @include display-flex();
 }
 
-[#{$track-name}-#{$gutter-name}],
-[#{$track-name}][#{$track-name}-#{$gutter-name}] > * {
+[layout-padding],
+[layout][layout-padding] > * {
   padding: $gutter-width / 2;
 }
 
-[#{$track-name}-#{$gutter-name}] + [#{$track-name}-#{$gutter-name}] {
+[layout-padding] + [layout-padding] {
   margin-top: -($gutter-width / 2);
   padding-top: 0;
 }
 
-[#{$track-name}-fill] {
+[layout-fill] {
   margin: 0;
   height: 100vh;
 }
 
 /* layout = Default */
-@include flex-presets( #{$cell-name} );
-@include offset-presets( #{$offset-name} );
+@include flex-presets( flex );
+@include offset-presets( offset );
 
 /* layout-sm = Small (Tablets) */
 @include breakpoint-media-query(sm, $breakpoint-sm);

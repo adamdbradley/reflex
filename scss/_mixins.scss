@@ -206,14 +206,14 @@
 
 @mixin breakpoint-media-query($suffix, $min-width) {
   @media (min-width: $min-width) {
-    [#{$track-name}-#{$suffix}] {
+    [layout-#{$suffix}] {
       @include flex-direction(row);
     }
     [layout-#{$suffix}="vertical"] {
       @include flex-direction(column);
     }
 
-    @include flex-presets( #{$cell-name}-#{$suffix} );
-    @include offset-presets( #{$offset-name}-#{$suffix} );
+    @include flex-presets( flex-#{$suffix} );
+    @include offset-presets( offset-#{$suffix} );
   }
 }

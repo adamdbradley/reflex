@@ -69,33 +69,49 @@ footer {
   color: white;
 }
 
-.demo-cell {
+.demo [layout] > div {
+  margin: 10px;
   padding: 10px;
-  background: #eee;
+  min-width: 40px
+}
+
+.demo,
+.demo-padding {
   color: white;
 }
 
-[layout]:nth-child(1) .demo-cell {
-  background: #8BC34A;
+.demo-padding [layout-padding] > div > div {
+  margin: 0;
+  padding: 10px;
 }
 
-[layout]:nth-child(2) .demo-cell {
+.demo [layout]:nth-child(1) > div,
+.demo-padding [layout-padding]:nth-child(1) > div > div {
   background: #00BCD4;
 }
 
-[layout]:nth-child(3) .demo-cell {
-  background: #FF4081;
+.demo [layout]:nth-child(2) > div,
+.demo-padding [layout-padding]:nth-child(2) > div > div {
+  background: #8BC34A;
 }
 
-[layout]:nth-child(4) .demo-cell {
-  background: #AB47BC;
+.demo [layout]:nth-child(3) > div,
+.demo-padding [layout-padding]:nth-child(3) > div > div {
+  background: #005399;
 }
 
-[layout]:nth-child(5) .demo-cell {
+.demo [layout]:nth-child(4) > div,
+.demo-padding [layout-padding]:nth-child(4) > div > div {
   background: #FFCD40;
 }
 
-[layout]:nth-child(6) .demo-cell {
-  background: #005399;
+.demo [layout]:nth-child(5) > div,
+.demo-padding [layout-padding]:nth-child(5) > div > div {
+  background: #FF4081;
+}
+
+.demo [layout]:nth-child(6) > div,
+.demo-padding [layout-padding]:nth-child(6) > div > div {
+  background: #AB47BC;
 }
 
