@@ -45,6 +45,46 @@ $gutter-width:   15px !default;
   height: 100vh;
 }
 
+[center] {
+  @include align-items(center);
+}
+
+[start] {
+  @include align-items(flex-start);
+}
+
+[end] {
+  @include align-items(flex-end);
+}
+
+[start-justified] {
+  @include justify-content(flex-start);
+}
+
+[end-justified] {
+  @include justify-content(flex-end);
+}
+
+[space-between-justified] {
+  @include justify-content(space-between);
+}
+
+[space-around-justified] {
+  @include justify-content(space-around);
+}
+
+[block] {
+  display: block;
+}
+
+[inline-block] {
+  display: inline-block;
+}
+
+[hide] {
+  display: none;
+}
+
 /* layout = Default */
 @include flex-presets( flex );
 @include offset-presets( offset );

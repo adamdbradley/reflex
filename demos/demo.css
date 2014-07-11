@@ -27,6 +27,22 @@ iframe {
   border: 1px solid #ccc;
 }
 
+.inline-demo {
+  margin: 12px 0 30px 0;
+  padding: 5px;
+  height: 150px;
+  border: 1px solid #4db6ac;
+  background: #e0f2f1;
+}
+
+.inline-demo > div {
+  padding: 5px;
+  min-width: 130px;
+  border: 1px solid #004d40;
+  background: #00897b;
+  color: #e0f2f1;
+}
+
 a {
   margin: 0 5px;
   font-size: 11px;
@@ -74,9 +90,8 @@ footer {
 }
 
 .demo [layout] > div {
-  margin: 10px;
   padding: 10px;
-  min-width: 40px;
+  min-width: 30px;
 }
 
 .demo,
@@ -125,6 +140,16 @@ footer {
   background: #AB47BC;
 }
 
+.demo-padding span {
+  padding: 5px;
+  background: #AB47BC;
+}
+
+.demo-padding p {
+  padding: 5px 0;
+  color: #333;
+}
+
 body:before {
   position: fixed;
   top: 4px;
@@ -138,6 +163,7 @@ body:before {
   content: 'default';
   text-align: center;
   font-size: 10px;
+  opacity: .8;
 }
 
 @media (min-width: 600px) {

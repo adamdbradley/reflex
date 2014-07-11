@@ -211,5 +211,18 @@
 
     @include flex-presets( flex-#{$suffix} );
     @include offset-presets( offset-#{$suffix} );
+
+    [block-#{$suffix}] {
+      display: block;
+    }
+
+    [inline-block-#{$suffix}] {
+      display: inline-block;
+    }
+
+    [hide-#{$suffix}] {
+      display: none;
+    }
+
   }
 }

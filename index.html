@@ -3,6 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Reflex Layout Demos</title>
+  <link rel="stylesheet" href="./css/layout.css">
   <link rel="stylesheet" href="./demos/demo.css">
 </head>
 <body class="demos">
@@ -110,6 +111,7 @@
   </table>
 
 
+
   <h3>Horizontal and Vertical Layouts</h3>
   <p>
     A layout contains cells, and a layout determines if its cells should
@@ -120,12 +122,14 @@
   <iframe src="./demos/horizontal-vertical-layout.html"></iframe>
 
 
+
   <h3>Flex Cells</h3>
   <p>
     Child cells of <code>layout</code> elements can use the <code>flex</code> attribute to fill
     the available space.
   </p>
   <iframe src="./demos/flex-cell.html"></iframe>
+
 
 
   <h3>Layout Padding</h3>
@@ -138,6 +142,7 @@
   <iframe src="./demos/layout-padding.html"></iframe>
 
 
+
   <h3>Layout Padding with Available Space Percents</h3>
   <p>
     Cells can be given integers to represent the percentage of the available space
@@ -145,6 +150,7 @@
     fill up the available area.
   </p>
   <iframe src="./demos/layout-padding-percents.html"></iframe>
+
 
 
   <h3>Layout Padding with Offsets</h3>
@@ -170,6 +176,208 @@
     media query.
   </p>
   <iframe src="./demos/full-width-header-menu-footer.html"></iframe>
+
+
+
+  <h3>Item Alignment: stretch (default)</h3>
+  <p>
+    Be default child cells in a horizontal layout will "stretch" the height of the layout.
+  </p>
+  <div layout="horizontal" class="inline-demo">
+    <div>stretch (default)</div>
+  </div>
+  <div layout="vertical" class="inline-demo">
+    <div>stretch (default)</div>
+  </div>
+
+
+
+  <h3>Item Alignment: center</h3>
+  <p>
+    The <code>center</code> attribute will center the cell across the main axis.
+    For example, on a horizontal layout the center attribute will center it
+    vertically within the layout. On a vertical layout, the cell will be aligned
+    center horizontally.
+  </p>
+  <div layout="horizontal" center class="inline-demo">
+    <div>center</div>
+  </div>
+  <div layout="vertical" center class="inline-demo">
+    <div>center</div>
+  </div>
+
+
+  <h3>Item Alignment: start</h3>
+  <p>
+    The <code>start</code> attribute will position the cell at the top for a
+    a horizontal layout, and to the left for a vertical layout.
+  </p>
+  <div layout="horizontal" start class="inline-demo">
+    <div>start</div>
+  </div>
+  <div layout="vertical" start class="inline-demo">
+    <div>start</div>
+  </div>
+
+
+
+  <h3>Item Alignment: end</h3>
+  <p>
+    The <code>end</code> attribute will position the cell at the bottom for a
+    a horizontal layout, and to the right for a vertical layout.
+  </p>
+  <div layout="horizontal" end class="inline-demo">
+    <div>end</div>
+  </div>
+  <div layout="vertical" end class="inline-demo">
+    <div>end</div>
+  </div>
+
+
+
+  <h3>Justify Content: start-justified</h3>
+  <p>
+    Justify Content attributes help distribute extra free space when either all the
+    cells on a line are inflexible, or are flexible but have reached their maximum size.
+  </p>
+  <p>
+    The <code>start-justified</code> attribute packs up all the cells to the start line.
+  </p>
+  <div layout="horizontal" start-justified class="inline-demo">
+    <div>start-justified</div>
+    <div>start-justified</div>
+  </div>
+  <div layout="vertical" start-justified class="inline-demo">
+    <div>start-justified</div>
+    <div>start-justified</div>
+  </div>
+
+
+
+  <h3>Justify Content: end-justified</h3>
+  <p>
+    The <code>end-justified</code> attribute packs up all the cells to the start line.
+  </p>
+  <div layout="horizontal" end-justified class="inline-demo">
+    <div>end-justified</div>
+    <div>end-justified</div>
+  </div>
+  <div layout="vertical" end-justified class="inline-demo">
+    <div>end-justified</div>
+    <div>end-justified</div>
+  </div>
+
+
+
+  <h3>Justify Content: center-justified</h3>
+  <p>
+    The <code>center-justified</code> attribute puts all of the cells in the center.
+  </p>
+  <div layout="horizontal" center-justified class="inline-demo">
+    <div>center-justified</div>
+    <div>center-justified</div>
+  </div>
+  <div layout="vertical" center-justified class="inline-demo">
+    <div>center-justified</div>
+    <div>center-justified</div>
+  </div>
+
+
+
+  <h3>Justify Content: space-between-justified</h3>
+  <p>
+    The <code>space-between-justified</code> attribute will evenly distribute
+    the cells, with the first cell is aligned at the start, and the last cell
+    aligned at the end.
+  </p>
+  <div layout="horizontal" space-between-justified class="inline-demo">
+    <div>Uno</div>
+    <div>Dos</div>
+    <div>Tres</div>
+  </div>
+  <div layout="vertical" space-between-justified class="inline-demo">
+    <div>Uno</div>
+    <div>Dos</div>
+    <div>Tres</div>
+  </div>
+
+
+
+  <h3>Justify Content: space-around-justified</h3>
+  <p>
+    The <code>space-around-justified</code> attribute will evenly distribute
+    the cells, all with equal space between them.
+  </p>
+  <div layout="horizontal" space-around-justified class="inline-demo">
+    <div>Uno</div>
+    <div>Dos</div>
+    <div>Tres</div>
+  </div>
+  <div layout="vertical" space-around-justified class="inline-demo">
+    <div>Uno</div>
+    <div>Dos</div>
+    <div>Tres</div>
+  </div>
+
+
+
+  <h3>Utility Attributes</h3>
+  <table>
+    <tr>
+      <th>Attribute</th>
+      <th>Purpose</th>
+    </tr>
+    <tr>
+      <td>block</td>
+      <td>Apply <code>display: block</code></td>
+    </tr>
+    <tr>
+      <td>block-sm</td>
+      <td>Apply <code>display: block</code> when the small media query is active.</td>
+    </tr>
+    <tr>
+      <td>block-md</td>
+      <td>Apply <code>display: block</code> when the medium media query is active.</td>
+    </tr>
+    <tr>
+      <td>block-lg</td>
+      <td>Apply <code>display: block</code> when the large media query is active.</td>
+    </tr>
+    <tr>
+      <td>inline-block</td>
+      <td>Apply <code>display: inline-block</code></td>
+    </tr>
+    <tr>
+      <td>inline-block-sm</td>
+      <td>Apply <code>display: inline-block</code> when the small media query is active.</td>
+    </tr>
+    <tr>
+      <td>inline-block-md</td>
+      <td>Apply <code>display: inline-block</code> when the medium media query is active.</td>
+    </tr>
+    <tr>
+      <td>inline-block-lg</td>
+      <td>Apply <code>display: inline-block</code> when the large media query is active.</td>
+    </tr>
+    <tr>
+      <td>hide</td>
+      <td><code>display: none</code></td>
+    </tr>
+    <tr>
+      <td>hide-sm</td>
+      <td>Apply <code>display: none</code> when the small media query is active.</td>
+    </tr>
+    <tr>
+      <td>hide-md</td>
+      <td>Apply <code>display: none</code> when the medium media query is active.</td>
+    </tr>
+    <tr>
+      <td>hide-lg</td>
+      <td>Apply <code>display: none</code> when the large media query is active.</td>
+    </tr>
+  </table>
+  <iframe src="./demos/utility-attributes.html"></iframe>
+
 
 
   <script>
