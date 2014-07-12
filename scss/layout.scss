@@ -17,7 +17,6 @@ $gutter-width:   15px !default;
 }
 
 [layout="vertical"] {
-  @include display-flex();
   @include flex-direction(column);
 }
 
