@@ -13,7 +13,6 @@ $gutter-width:   15px !default;
 [layout] {
   @include box-sizing(border-box);
   @include display-flex();
-  @include flex-direction(row);
 }
 
 [layout="vertical"] {
