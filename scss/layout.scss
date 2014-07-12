@@ -65,6 +65,10 @@ $gutter-width:   15px !default;
   @include justify-content(flex-end);
 }
 
+[center-justified] {
+  @include justify-content(center);
+}
+
 [space-between-justified] {
   @include justify-content(space-between);
 }
