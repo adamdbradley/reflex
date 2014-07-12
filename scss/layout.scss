@@ -43,6 +43,9 @@ $gutter-width:   15px !default;
   height: 100vh;
 }
 
+
+/* Align Items */
+
 [center] {
   @include align-items(center);
 }
@@ -54,6 +57,9 @@ $gutter-width:   15px !default;
 [end] {
   @include align-items(flex-end);
 }
+
+
+/* Justify Content */
 
 [start-justified] {
   @include justify-content(flex-start);
@@ -75,6 +81,9 @@ $gutter-width:   15px !default;
   @include justify-content(space-around);
 }
 
+
+/* Utility Attributes */
+
 [block] {
   display: block;
 }
@@ -86,6 +95,7 @@ $gutter-width:   15px !default;
 [hide] {
   display: none;
 }
+
 
 /* layout = Default */
 @include flex-presets( flex );

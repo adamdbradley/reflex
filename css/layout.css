@@ -50,6 +50,7 @@
   height: 100vh;
 }
 
+/* Align Items */
 [center] {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -74,6 +75,7 @@
   align-items: flex-end;
 }
 
+/* Justify Content */
 [start-justified] {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
@@ -114,6 +116,7 @@
   justify-content: space-around;
 }
 
+/* Utility Attributes */
 [block] {
   display: block;
 }
